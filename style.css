@@ -65,7 +65,9 @@ body {
 .txt-grey {
     color: var(--color-grey);
 }
-
+.txt-l-grey {
+    color: var(--color-lightgrey);
+}
 /* Sezioni */
 .wrapper {
     height: 100vh;
@@ -75,6 +77,10 @@ body {
     background-color: var(--color-dark);
     flex: 1 1 auto;
     min-height: 0;
+}
+
+.margin-section {
+    margin-top: 30px;
 }
 
 /* Header */
@@ -117,7 +123,7 @@ main {
 /* Sezione Nav main*/
 #nav ul {
     list-style: none;
-    gap: 15px;
+    gap: 12px;
 }
 
 #nav a {
@@ -130,6 +136,47 @@ main {
     border-bottom: 2px solid var(--color-highlight);
     width: 30%;
     margin: auto;
+}
+
+/* Sezione recently played */
+#rec-played h2 {
+    padding-bottom: 30px;
+}
+.row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-right: 15px;
+}
+.col {
+    width: calc((100% - 75px) / 6);
+}
+.col img {
+    width: 100%;
+    display: block;
+}
+.text {
+    line-height: 1;
+    padding-top: 18px;
+    text-align: center;
+}
+.text h4 {
+    padding-bottom: 10px;
+}
+
+/* Sezione creazioni per John Doe */
+#create-john-doe h2, #artist h2 {
+    padding-bottom: 10px;
+}
+
+#create-john-doe h5, #artist h5 {
+    padding-bottom: 30px;
+    font-size: 0.7em;
+}
+
+/* Sezione artisti popolari */
+#artist img {
+    border-radius: 50%;
 }
 
 /* sidebar */
