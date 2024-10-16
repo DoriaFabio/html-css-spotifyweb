@@ -197,6 +197,25 @@ Sezione recently played
     width: 100%;
     display: block;
 }
+.card-image {
+    position: relative;
+}
+.card:hover .card-image::after {
+    content: '\F144';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 4em;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    color: var(--color-lightgrey);
+    justify-content: center;
+    align-items: center;
+}
 
 .text {
     line-height: 1;
