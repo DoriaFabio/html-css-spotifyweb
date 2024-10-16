@@ -39,7 +39,13 @@ Impostazioni testo
 .txt-uppercase {
     text-transform: uppercase;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
 /****
 Flex
 ****/
@@ -98,7 +104,9 @@ Sezioni
 .margin-section {
     margin-top: 30px;
 }
-
+.margin-left {
+    margin-left: 20px;
+}
 /******
 Header
 ******/
@@ -118,10 +126,8 @@ header a {
     padding: 10px 40px;
     border-radius: 20px;
     margin-right: 40px;
-    text-decoration: none;
     font-size: 1em;
     transition: all 0.5s;
-
 }
 
 header a:hover {
@@ -145,13 +151,10 @@ main {
 Sezione Nav main
 ****************/
 #nav ul {
-    list-style: none;
     gap: 12px;
 }
 
-#nav a {
-    text-decoration: none;
-    color: inherit;
+#nav a {    
     transition: all 0.5s;
 }
 
@@ -233,17 +236,16 @@ Sidebar
     flex: 0 0 17%;
     background-color: var(--color-black);
     z-index: 100;
+    position: relative;
 }
 
 .logo {
     width: 150px;
-    margin-left: 20px;
     margin-top: 20px;
 }
 
 #menu ul {
     margin: 20px;
-    list-style: none;
     line-height: 2.5;
 }
 
@@ -253,10 +255,9 @@ Sidebar
 }
 
 #menu a {
-    text-decoration: none;
-    color: inherit;
     opacity: 0.5;
     position: relative;
+    transition: all 0.5s;
 }
 
 #menu a:hover {
@@ -279,6 +280,45 @@ Sidebar
     background-color: var(--color-highlight);
 }
 
+#playlist ul {
+    line-height: 2.5;
+    margin-top: 10px;
+}
+
+#playlist .icon {
+    margin-right: 10px;
+    background-color: var(--color-lightgrey);
+    color: var(--color-black);
+    padding: 7px;
+} 
+
+#download i {
+    margin-right: 10px;
+}
+#download {
+    margin-bottom: 10px;
+}
+#utente {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+#utente hr {
+    width: 85%;
+    margin: 0 auto;
+}
+#profile img {
+    width: 20px;
+    background-color: var(--color-grey);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#profile {
+    margin-top: 10px;
+}
 /*******
 Footer 
 *******/
