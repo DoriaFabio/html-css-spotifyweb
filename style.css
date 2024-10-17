@@ -90,9 +90,11 @@ Flex
 .gap1 {
     gap: 35px;
 }
+
 .gap2 {
     gap: 25px;
 }
+
 /******
 Colori
 ******/
@@ -246,7 +248,8 @@ Sezione recently played
     text-align: center;
 }
 
-.text h4, .text h5 {
+.text h4,
+.text h5 {
     padding-bottom: 8px;
     overflow: hidden;
     white-space: nowrap;
@@ -288,6 +291,13 @@ Sidebar
 .logo {
     width: 130px;
     margin-top: 20px;
+}
+
+.small {
+    display: none;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 30px;
 }
 
 /* Menu section */
@@ -332,6 +342,7 @@ Sidebar
     line-height: 2.5;
     margin-top: 10px;
 }
+
 #playlist ul a:hover {
     color: var(--color-light);
 }
@@ -380,9 +391,14 @@ Sidebar
 
 #profile img {
     width: 20px;
+    height: 20px;
     background-color: var(--color-grey);
     border-radius: 50%;
     margin-right: 10px;
+}
+
+#profile img:hover {
+    background-color: var(--color-lightgrey);
 }
 
 #profile {
@@ -399,6 +415,7 @@ footer {
     z-index: 5000;
 }
 
+/* Div section */
 #littleplay,
 #volume {
     width: 220px;
@@ -411,6 +428,30 @@ footer {
     height: 100%;
 }
 
+/* Section  littleplay*/
+#littleplay img {
+    height: 40px;
+}
+
+#littleplay h6 {
+    font-size: 12px;
+}
+
+#littleplay p {
+    font-size: 8px;
+}
+
+.icons a {
+    padding: 0 5px;
+}
+
+.icons a:hover {
+    color: var(--color-light);
+}
+
+/* Section playcenter */
+
+/* Section player-icon */
 #player-icon {
     height: 60%;
     font-size: 1.2em;
@@ -420,6 +461,7 @@ footer {
     font-size: 1.5em;
     transition: all 0.2s;
 }
+
 #player-icon .play:hover {
     font-size: 1.7em;
 }
@@ -428,8 +470,13 @@ footer {
     height: 100%;
 }
 
+/* Section play-time */
 #playtime {
     height: 30%;
+}
+
+#playtime p {
+    padding: 0 10px;
 }
 
 .song-time {
@@ -452,28 +499,13 @@ input[type="range" i]::-webkit-slider-thumb {
     -webkit-appearance: none;
     opacity: 0;
 }
+
 input[type="range" i]::-webkit-slider-thumb:hover {
     -webkit-appearance: none;
     opacity: 1;
 }
 
-#littleplay img {
-    height: 40px;
-}
-
-#littleplay h6,
-#littleplay p {
-    font-size: 12px;
-}
-
-.icons a {
-    padding: 0 5px;
-}
-
-.icons a:hover {
-    color: var(--color-light);
-}
-
+/* Section volume */
 #volume input {
     width: 40%;
     accent-color: var(--color-lightgrey);
@@ -485,9 +517,11 @@ input[type="range" i]::-webkit-slider-thumb:hover {
 #volume input:hover {
     accent-color: var(--color-highlight);
 }
+
 #volume a:hover {
     color: var(--color-light);
 }
+
 /***************************
         Media Query
 ***************************/
@@ -501,16 +535,95 @@ input[type="range" i]::-webkit-slider-thumb:hover {
     .col {
         width: calc((100% - 50px) / 2);
     }
+
+    #littleplay,
+    #volume {
+        width: 160px;
+        padding: 10px;
+        height: 100%;
+        gap: 10px;
+    }
+
+    #player-icon ul {
+        gap: 15px;
+    }
+
+    #littleplay h6,
+    #littleplay p {
+        font-size: 9px;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .small {
+        display: block;
+    }
+
+    #sidebar {
+        flex: 0 0 50px;
+        background-color: var(--color-black);
+        z-index: 100;
+        position: relative;
+    }
+
+    #menu ul {
+        padding-top: 20px;
+        margin-left: 15px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+
+    #menu ul li {
+        padding: 10px 0;
+    }
+
+    #menu a::before {
+        left: -15px;
+        top: -5px;
+    }
+
+    #profile {
+        margin-left: 15px;
+    }
+
+    #download {
+        margin-left: 19px;
+    }
+    #playcenter {
+        width: 100%;
+    }
 }
+
 @media screen and (max-width: 480px) {
     .col {
         width: calc((100%) / 1);
     }
+
     header a {
         border: 1px solid var(--color-grey);
         padding: 10px 30px;
         border-radius: 20px;
         margin-right: 30px;
         font-size: 0.8em;
+    }
+
+    #player-icon ul {
+        gap: 8px;
+    }
+
+    #volume {
+        padding: 0;
+        justify-content: space-around;
+        gap: 0px;
+        font-size: 11px;
+    }
+
+    #littleplay img {
+        display: none;
+    }
+    .icons {
+        font-size: 11px;
     }
 }
