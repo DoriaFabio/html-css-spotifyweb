@@ -332,12 +332,21 @@ Sidebar
     line-height: 2.5;
     margin-top: 10px;
 }
+#playlist ul a:hover {
+    color: var(--color-light);
+}
 
 #playlist .icon {
     margin-right: 10px;
     background-color: var(--color-lightgrey);
     color: var(--color-black);
     padding: 7px;
+    transition: all 0.5s;
+}
+
+#playlist .icon:hover {
+    background-color: var(--color-black);
+    color: var(--color-light)
 }
 
 /* download section */
@@ -404,7 +413,15 @@ footer {
 
 #player-icon {
     height: 60%;
+    font-size: 1.2em;
+}
+
+#player-icon .play {
     font-size: 1.5em;
+    transition: all 0.2s;
+}
+#player-icon .play:hover {
+    font-size: 1.7em;
 }
 
 #player-icon ul {
@@ -482,7 +499,7 @@ input[type="range" i]::-webkit-slider-thumb:hover {
 
 @media screen and (max-width: 560px) {
     .col {
-        width: calc((100% - px) / 2);
+        width: calc((100% - 50px) / 2);
     }
 }
 @media screen and (max-width: 480px) {
