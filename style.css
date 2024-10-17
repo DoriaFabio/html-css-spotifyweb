@@ -21,7 +21,6 @@ Impostazioni generali
     --color-grey: #686A70;
 }
 
-/* Debug */
 .debug {
     border: 1px solid green;
 }
@@ -33,16 +32,22 @@ body {
     font-family: "Montserrat", serif;
 }
 
+html {
+    font-size: 14px;
+}
+
 /******************
 Impostazioni testo
 ******************/
 .txt-uppercase {
     text-transform: uppercase;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 ul {
     list-style: none;
 }
@@ -50,9 +55,11 @@ ul {
 .transition {
     transition: all 0.5s;
 }
+
 .bold {
     font-weight: bold;
 }
+
 /****
 Flex
 ****/
@@ -76,11 +83,15 @@ Flex
     flex-wrap: wrap;
 }
 
-.d-none {
-    display: none;
-}
 .s-between {
     justify-content: space-between;
+}
+
+.gap1 {
+    gap: 35px;
+}
+.gap2 {
+    gap: 25px;
 }
 /******
 Colori
@@ -113,9 +124,11 @@ Sezioni
 .margin-section {
     margin-top: 30px;
 }
+
 .margin-left {
-    margin-left: 15px;
+    margin-left: 20px;
 }
+
 /******
 Header
 ******/
@@ -162,7 +175,7 @@ Sezione Nav main
     gap: 12px;
 }
 
-#nav a {    
+#nav a {
     transition: all 0.5s;
 }
 
@@ -192,26 +205,28 @@ Sezione recently played
 
 .row {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
     padding-right: 15px;
 }
 
 .col {
-    width: calc((100% - 75px) / 6);
+    width: calc((100% - 50px) / 6);
 }
 
 .col img {
     width: 100%;
     display: block;
 }
+
 .card-image {
     position: relative;
 }
+
 .card:hover .card-image::after {
     content: '\F144';
     font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    font-weight: 200;
     font-size: 4em;
     display: flex;
     position: absolute;
@@ -231,8 +246,11 @@ Sezione recently played
     text-align: center;
 }
 
-.text h4 {
-    padding-bottom: 10px;
+.text h4, .text h5 {
+    padding-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /******************************
@@ -252,15 +270,16 @@ Sezione creazioni per John Doe
 /************************
 Sezione artisti popolari
 ************************/
-#artist img {
+#artist .card-image {
     border-radius: 50%;
+    overflow: hidden;
 }
 
 /*******
 Sidebar 
 *******/
 #sidebar {
-    flex: 0 0 17%;
+    flex: 0 0 220px;
     background-color: var(--color-black);
     z-index: 100;
     position: relative;
@@ -271,8 +290,9 @@ Sidebar
     margin-top: 20px;
 }
 
+/* Menu section */
 #menu ul {
-    margin: 15px;
+    margin: 20px;
     line-height: 2.5;
 }
 
@@ -299,7 +319,7 @@ Sidebar
     margin: 0 auto;
     transition: all 0.5s;
     position: absolute;
-    left: -15px;
+    left: -20px;
     top: 0;
 }
 
@@ -307,6 +327,7 @@ Sidebar
     background-color: var(--color-highlight);
 }
 
+/* Playlist section*/
 #playlist ul {
     line-height: 2.5;
     margin-top: 10px;
@@ -317,14 +338,23 @@ Sidebar
     background-color: var(--color-lightgrey);
     color: var(--color-black);
     padding: 7px;
-} 
+}
 
+/* download section */
 #download i {
     margin-right: 10px;
 }
+
 #download {
     margin-bottom: 10px;
 }
+
+#download a i:hover,
+#download a h5:hover {
+    color: var(--color-lightgrey);
+}
+
+/* Utente section */
 #utente {
     position: absolute;
     bottom: 0;
@@ -333,45 +363,137 @@ Sidebar
     font-size: 0.9em;
     margin-bottom: 10px;
 }
+
 #utente hr {
     width: 85%;
     margin: 0 auto;
 }
+
 #profile img {
     width: 20px;
     background-color: var(--color-grey);
     border-radius: 50%;
     margin-right: 10px;
 }
+
 #profile {
     margin-top: 10px;
 }
-#download a i:hover, #download a h5:hover{
-    color: var(--color-lightgrey);
-}
+
 /*******
 Footer 
 *******/
 footer {
     background-color: var(--color-darkgrey);
     flex: 0 0 80px;
+    position: relative;
+    z-index: 5000;
 }
+
+#littleplay,
+#volume {
+    width: 220px;
+    padding: 10px;
+    height: 100%;
+}
+
+#playcenter {
+    width: 40%;
+    height: 100%;
+}
+
+#player-icon {
+    height: 60%;
+    font-size: 1.5em;
+}
+
+#player-icon ul {
+    height: 100%;
+}
+
+#playtime {
+    height: 30%;
+}
+
+.song-time {
+    flex-grow: 1;
+}
+
+.song-time input {
+    width: 100%;
+    accent-color: var(--color-lightgrey);
+    height: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.song-time input:hover {
+    accent-color: var(--color-highlight);
+}
+
+input[type="range" i]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    opacity: 0;
+}
+input[type="range" i]::-webkit-slider-thumb:hover {
+    -webkit-appearance: none;
+    opacity: 1;
+}
+
 #littleplay img {
     height: 40px;
-    margin: 0 10px;
 }
-#littleplay h6, #littleplay p {
+
+#littleplay h6,
+#littleplay p {
     font-size: 12px;
 }
-.icons {
-    margin-left: 60px;
-}
+
 .icons a {
     padding: 0 5px;
 }
 
-#player i{
-    padding-right: 30px;
+.icons a:hover {
     color: var(--color-light);
-    font-size: 20px;
+}
+
+#volume input {
+    width: 40%;
+    accent-color: var(--color-lightgrey);
+    height: 6px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#volume input:hover {
+    accent-color: var(--color-highlight);
+}
+#volume a:hover {
+    color: var(--color-light);
+}
+/***************************
+        Media Query
+***************************/
+@media screen and (max-width: 760px) {
+    .col {
+        width: calc((100% - 50px) / 4);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .col {
+        width: calc((100% - px) / 2);
+    }
+}
+@media screen and (max-width: 480px) {
+    .col {
+        width: calc((100%) / 1);
+    }
+    header a {
+        border: 1px solid var(--color-grey);
+        padding: 10px 30px;
+        border-radius: 20px;
+        margin-right: 30px;
+        font-size: 0.8em;
+    }
 }

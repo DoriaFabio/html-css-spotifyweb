@@ -291,9 +291,9 @@
         </div>
         <!-----
         Footer 
-        ------>
-        <footer class="d-flex s-between">
-            <div id="littleplay" class="d-flex a-center">
+        ------->
+        <footer class="d-flex s-between a-center">
+            <div id="littleplay" class="d-flex a-center s-between">
                 <img src="./spotify/img/sinister.jpeg" alt="Sinister small">
                 <div>
                     <h6 class="txt-white">Sinister</h6>
@@ -308,21 +308,36 @@
                     </a>
                 </div>
             </div>
-            <div>
-                <div id="player" class="d-flex a-center">
-                    <i class="fa-solid fa-shuffle"></i>
-                    <i class="fa-solid fa-backward-step"></i>
-                    <i class="fa-regular fa-circle-play"></i>
-                    <i class="fa-solid fa-forward-step"></i>
-                    <i class="fa-solid fa-arrow-rotate-right"></i>
+            <div id="playcenter">
+                <div id="player-icon">
+                    <ul class="d-flex a-center gap2 j-center txt-white">
+                        <li><i class="fa-solid fa-shuffle"></i></li>
+                        <li><i class="fa-solid fa-backward-step"></i></li>
+                        <li><i class="fa-regular fa-circle-play play"></i></li>
+                        <li> <i class="fa-solid fa-forward-step"></i></li>
+                        <li><i class="fa-solid fa-arrow-rotate-right"></i></li>
+                    </ul>
                 </div>
-                <div class="d-flex a-center s-between">
-                    <p class="txt-white">0:25</p>
-                    <p class="txt-white">4:35</p>
+                <div id="playtime"  class="d-flex a-center s-between gap1">
+                    <p class="txt-white t-init">0:25</p>
+                    <div class=song-time>
+                        <input type="range" name="time" id="time-song">
+                    </div>
+                    <p
+                    class="txt-white">4:35</p>
                 </div>
             </div>
-            <div>
-
+            <div id="volume" class="d-flex a-center s-between txt-l-grey">
+                <a href="">
+                    <i class="fa-solid fa-list-ul"></i>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-display"></i>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-volume-high"></i>
+                </a>
+                <input type="range" name="volume" id="volume-high">
             </div>
         </footer>
     </div>
