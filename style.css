@@ -350,7 +350,6 @@ Sidebar
 #playlist ul {
     line-height: 2.5;
     margin-top: 10px;
-    flex: 1 1 auto;
     overflow-y: auto;
 }
 
@@ -449,7 +448,7 @@ footer {
 }
 
 #littleplay p {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .icons a {
