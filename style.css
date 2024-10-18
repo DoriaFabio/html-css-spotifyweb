@@ -115,6 +115,7 @@ Sezioni
 *******/
 .wrapper {
     height: 100vh;
+    overflow: hidden;
 }
 
 .upper-content {
@@ -286,6 +287,8 @@ Sidebar
     background-color: var(--color-black);
     z-index: 100;
     position: relative;
+    min-height: 350px;
+    overflow: hidden;
 }
 
 .logo {
@@ -338,9 +341,17 @@ Sidebar
 }
 
 /* Playlist section*/
+
+#playlist {
+    flex: 1 1 auto;
+    min-height: 0px;
+}
+
 #playlist ul {
     line-height: 2.5;
     margin-top: 10px;
+    flex: 1 1 auto;
+    overflow-y: auto;
 }
 
 #playlist ul a:hover {
